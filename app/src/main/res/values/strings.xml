@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">cofee order</string>
+    <string name="todo">TODO</string>
+    <string name="backimage">backImage</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="_0">0</string>
+    <string name="price">Price</string>
+    <string name="prices">prices :</string>
+    <string name="order">order</string>
+</resources>
