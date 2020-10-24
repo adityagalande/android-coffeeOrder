@@ -54,11 +54,6 @@ public class MainActivity extends AppCompatActivity {
         displayMessage(msg);
         //displayprice(quantitys *10);
     }
-    //DisplayPrice method for integers
-    private void displayprice(int number) {
-        TextView price_textViews = findViewById(R.id.price_textView);
-        price_textViews.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
 
     private void displayMessage(String message){
         TextView xyz = findViewById(R.id.price_textView);
