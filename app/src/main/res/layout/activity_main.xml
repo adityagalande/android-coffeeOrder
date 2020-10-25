@@ -11,9 +11,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_margin="8dp"
         android:background="#3CB371"
         android:orientation="horizontal"
-        android:layout_margin="8dp"
         android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,12 +31,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:padding="4dp"
             android:text="@string/_0"
-            android:gravity="center_horizontal"
             android:textColor="#000000"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button2"
@@ -49,8 +49,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="8dp"
         android:background="#3CB371"
         android:orientation="horizontal"
@@ -73,19 +73,19 @@
             android:id="@+id/price_textView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="@string/_0"
             android:textColor="#000000"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:text="@string/_0"
-            android:padding="4dp"
-            android:layout_weight="1"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/order"
-            android:onClick="order"/>
+            android:onClick="order"
+            android:text="@string/order" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

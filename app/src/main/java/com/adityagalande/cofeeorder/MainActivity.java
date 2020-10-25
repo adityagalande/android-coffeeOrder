@@ -19,16 +19,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
-        quantity ++;
+        quantity++;
         display(quantity);
     }
 
     public void decrement(View view) {
-        quantity --;
-        if(quantity < 0){
-            quantity=0;
+        quantity--;
+        if (quantity < 0) {
+            quantity = 0;
             display(0);
-        }else{
+        } else {
             display(quantity);
         }
 
@@ -37,17 +37,17 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void display(int number) {
         TextView quantity_textViews = findViewById(R.id.quantity_textView);
-        quantity_textViews.setText(""+number);
+        quantity_textViews.setText("" + number);
     }
 
     public void order(View view) {
         int quantitys = quantity;
         //String msg = (quantitys*5)+"$"+" Thank you!";
         String msg;
-        if(quantitys < 1){
+        if (quantitys < 1) {
             msg = "Select coffee!";
-        }else{
-            msg = (quantitys*5)+"$"+" Thanks!";
+        } else {
+            msg = (quantitys * 5) + "$" + " Thanks!";
         }
         //String price = Integer.toString(quantitys*5);
         //displayMessage(quantity+" Cup of coffee "+(quantitys*5)+"$ "+msg);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         //displayprice(quantitys *10);
     }
 
-    private void displayMessage(String message){
+    private void displayMessage(String message) {
         TextView xyz = findViewById(R.id.price_textView);
         xyz.setText(message);
     }
