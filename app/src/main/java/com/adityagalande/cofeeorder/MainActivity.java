@@ -67,10 +67,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         displayMessage(msg);
+<<<<<<< HEAD
     }
 
     @SuppressLint("ShowToast")
     private void displayMessage(String message) {
+=======
+        //displayprice(quantitys *10);
+    }
+    
+    private void displayMessage(String message){
+>>>>>>> 4794cbf1c66c5466d2b30999a0364a9a6d0629ac
         TextView xyz = findViewById(R.id.price_textView);
         xyz.setText(message);
     }
