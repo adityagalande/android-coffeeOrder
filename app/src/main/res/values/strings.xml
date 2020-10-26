@@ -8,4 +8,17 @@
     <string name="price">Price</string>
     <string name="prices">prices :</string>
     <string name="order">order</string>
+    <string name="name">Name</string>
+    <string name="cappuccino">CAPPUCCINO</string>
+    <string name="caffe_mocha">CAFFE MOCHA</string>
+    <string name="caramel_macchiato">CARAMEL MACCHIATO</string>
+    <string name="vanilla_latte">VANILLA LATTE</string>
+    <string name="cinnamon_dolce_latte">CINNAMON DOLCE LATTE</string>
+    <string name="classic_favorites">Classic FAVORITES</string>
+    <string name="extras">EXTRAS</string>
+    <string name="additional_espresso_shot">ADDITIONAL ESPRESSO SHOT</string>
+    <string name="add_flavored_syrup">ADD FLAVORED SYRUP</string>
+    <string name="silk_soy">SILK SOY</string>
+    <string name="empty">Empty</string>
+    <string name="order_summary">Order Summary</string>
 </resources>

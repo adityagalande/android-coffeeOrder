@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     int quantity = 0;
@@ -42,19 +44,32 @@ public class MainActivity extends AppCompatActivity {
 
     public void order(View view) {
         int quantitys = quantity;
-        //String msg = (quantitys*5)+"$"+" Thank you!";
-        String msg;
-        if (quantitys < 1) {
+
+        EditText customerName = (EditText) findViewById(R.id.customerName);
+        String custName = customerName.getText().toString();
+
+        CheckBox cappuccino = (CheckBox) findViewById(R.id.cappuccino);
+        boolean Cappuccino = cappuccino.isChecked();
+
+        CheckBox caffeMocha = (CheckBox) findViewById(R.id.caffeMocha);
+        boolean CaffeMocha = caffeMocha.isChecked();
+
+        String msg = "";
+        if (quantitys < 1 ) {
             msg = "Select coffee!";
         } else {
-            msg = (quantitys * 5) + "$" + " Thanks!";
+           if(Cappuccino){
+               quantitys =quantity*5;
+               msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : "+"Cappuccino";
+           }else if(CaffeMocha){
+               quantitys =quantity*7;
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : "+"CaffeMocha";
+            }
         }
-        //String price = Integer.toString(quantitys*5);
-        //displayMessage(quantity+" Cup of coffee "+(quantitys*5)+"$ "+msg);
         displayMessage(msg);
-        //displayprice(quantitys *10);
     }
 
+    @SuppressLint("ShowToast")
     private void displayMessage(String message) {
         TextView xyz = findViewById(R.id.price_textView);
         xyz.setText(message);
