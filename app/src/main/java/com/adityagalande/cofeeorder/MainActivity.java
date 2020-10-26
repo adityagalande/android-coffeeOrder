@@ -55,29 +55,22 @@ public class MainActivity extends AppCompatActivity {
         boolean CaffeMocha = caffeMocha.isChecked();
 
         String msg = "";
-        if (quantitys < 1 ) {
+        if (quantitys == 0) {
             msg = "Select coffee!";
         } else {
-           if(Cappuccino){
-               quantitys =quantity*5;
-               msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : "+"Cappuccino";
-           }else if(CaffeMocha){
-               quantitys =quantity*7;
-                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : "+"CaffeMocha";
+            if (Cappuccino) {
+                quantitys = quantity * 5;
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : " + "Cappuccino";
+            } else if (CaffeMocha) {
+                quantitys = quantity * 7;
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : " + "CaffeMocha";
             }
         }
         displayMessage(msg);
-<<<<<<< HEAD
     }
 
-    @SuppressLint("ShowToast")
+
     private void displayMessage(String message) {
-=======
-        //displayprice(quantitys *10);
-    }
-    
-    private void displayMessage(String message){
->>>>>>> 4794cbf1c66c5466d2b30999a0364a9a6d0629ac
         TextView xyz = findViewById(R.id.price_textView);
         xyz.setText(message);
     }
