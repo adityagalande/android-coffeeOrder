@@ -3,6 +3,8 @@ package com.adityagalande.cofeeorder;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,7 +14,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    int quantity = 0;
+    int quantity = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +24,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void increment(View view) {
         quantity++;
-        display(quantity);
+        if (quantity > 100) {
+            quantity = 100;
+            Toast.makeText(this, "You cannot have more than 100 coffee!", Toast.LENGTH_LONG).show();
+            display(quantity);
+        } else {
+            display(quantity);
+        }
     }
 
     public void decrement(View view) {
         quantity--;
-        if (quantity < 0) {
-            quantity = 0;
-            display(0);
+        if (quantity < 1) {
+            quantity = 1;
+            Toast.makeText(this, "You need to have atleast one coffee!", Toast.LENGTH_LONG).show();
+            ;
+            display(quantity);
         } else {
             display(quantity);
         }
@@ -43,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void order(View view) {
-        int quantitys = quantity;
 
         EditText customerName = (EditText) findViewById(R.id.customerName);
         String custName = customerName.getText().toString();
@@ -51,22 +60,54 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cappuccino = (CheckBox) findViewById(R.id.cappuccino);
         boolean Cappuccino = cappuccino.isChecked();
 
-        CheckBox caffeMocha = (CheckBox) findViewById(R.id.caffeMocha);
-        boolean CaffeMocha = caffeMocha.isChecked();
+        CheckBox caffeMocha = (CheckBox) findViewById(R.id.whippedCream);
+        boolean whippedCream = caffeMocha.isChecked();
 
         String msg = "";
-        if (quantitys == 0) {
+        if (quantity == 0) {
             msg = "Select coffee!";
         } else {
+            if (!Cappuccino && !whippedCream) {
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nTotal : " + calculatePrice(Cappuccino, whippedCream) + "$";
+            }
             if (Cappuccino) {
-                quantitys = quantity * 5;
-                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : " + "Cappuccino";
-            } else if (CaffeMocha) {
-                quantitys = quantity * 7;
-                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nSub Total : " + (quantitys) + "$" + "\nExtra : " + "CaffeMocha";
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nTotal : " + calculatePrice(Cappuccino, whippedCream) + "$\nTopings :\nCappuccino";
+            }
+            if (whippedCream) {
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nTotal : " + calculatePrice(Cappuccino, whippedCream) + "$\nTopings :\nWhippedCream";
+            }
+            if (Cappuccino && whippedCream) {
+                msg = "Name : " + custName + "\nQuantity : " + quantity + "\nTotal : " + calculatePrice(Cappuccino, whippedCream) + "$\nTopings :\nCappuccino\nWhippedCream";
             }
         }
+        String addresses = "adityagalande6@gmail.com";
+        composeEmail(addresses, custName, msg);
         displayMessage(msg);
+    }
+
+
+    public void composeEmail(String addresses, String custName, String msg) {
+
+        //This is Email intent function
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Hey! " + custName);
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
+    private int calculatePrice(boolean Cappuccino, boolean whippedCream) {
+        int price = 5;
+        if (Cappuccino) {
+            price += 1;
+        }
+        if (whippedCream) {
+            price += 2;
+        }
+        return quantity * price;
     }
 
 
