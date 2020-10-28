@@ -21,4 +21,7 @@
     <string name="silk_soy">SILK SOY</string>
     <string name="empty">Empty</string>
     <string name="order_summary">Order Summary</string>
+    <string name="toppings">Toppings</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="_1">1</string>
 </resources>
