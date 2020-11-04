@@ -29,46 +29,40 @@
                 android:id="@+id/customerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:autofillHints="Anonymous!!"
                 android:hint="@string/name"
-                android:textSize="20sp"
                 android:inputType="textCapWords"
-                android:layout_marginBottom="15dp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#e0876a"
                 android:text="@string/classic_favorites"
                 android:textAllCaps="true"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:background="#e0876a"
-                android:layout_marginBottom="5dp"/>
+                android:textStyle="bold" />
 
             <CheckBox
                 android:id="@+id/cappuccino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/cappuccino"
-                android:textAllCaps="true" />
+                style="@style/custom_cheakbox"
+                android:text="@string/cappuccino" />
 
             <CheckBox
                 android:id="@+id/caffeMocha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/caffe_mocha"
-                android:textAllCaps="true" />
-
-
+                style="@style/custom_cheakbox"
+                android:text="@string/caffe_mocha" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:background="#e0876a"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -105,18 +99,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
                 android:onClick="order"
-                android:text="@string/order"
-                android:layout_marginBottom="15dp"/>
+                android:text="@string/order" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/order_summary"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
                 android:background="#e0876a"
-                android:layout_marginBottom="5dp"/>
+                android:text="@string/order_summary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/price_textView"
