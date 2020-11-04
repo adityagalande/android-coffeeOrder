@@ -34,12 +34,39 @@
                 android:hint="@string/name"
                 android:inputType="textCapWords"
                 android:textSize="20sp" />
+<<<<<<< HEAD
+=======
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#e0876a"
+                android:text="@string/classic_favorites"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cappuccino"
+                style="@style/custom_cheakbox"
+                android:text="@string/cappuccino" />
+
+            <CheckBox
+                android:id="@+id/caffeMocha"
+                style="@style/custom_cheakbox"
+                android:text="@string/caffe_mocha" />
+>>>>>>> dev-branch
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+<<<<<<< HEAD
                 android:layout_marginTop="11dp"
+=======
+                android:layout_marginTop="15dp"
+>>>>>>> dev-branch
                 android:layout_marginBottom="15dp"
                 android:background="#e0876a"
                 android:orientation="horizontal"
@@ -112,7 +139,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:background="#e0876a"
+<<<<<<< HEAD
                 android:text="@string/order_summary" />
+=======
+                android:text="@string/order_summary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+>>>>>>> dev-branch
 
             <TextView
                 android:id="@+id/price_textView"

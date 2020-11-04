@@ -9,6 +9,7 @@
         <item name="android:windowBackground">@color/windowBackground</item>
     </style>
 
+<<<<<<< HEAD
     <!--Style for a header TextView you need to only mention these style in main.XML-->
     <style name="CustomText">
         <item name="android:textSize">16sp</item>
@@ -16,4 +17,12 @@
         <item name="background">@color/colorPrimary</item>
         <item name="android:padding">3dp</item>
     </style>
+=======
+    <style name="custom_cheakbox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+>>>>>>> dev-branch
 </resources>
