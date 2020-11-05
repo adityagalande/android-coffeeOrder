@@ -36,14 +36,9 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:background="#e0876a"
                 android:text="@string/classic_favorites"
-                android:textAllCaps="true"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                style="@style/custom_textView"/>
 
             <CheckBox
                 android:id="@+id/cappuccino"
@@ -104,13 +99,9 @@
                 android:text="@string/order" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:background="#e0876a"
                 android:text="@string/order_summary"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                style="@style/custom_textView"/>
 
             <TextView
                 android:id="@+id/price_textView"
