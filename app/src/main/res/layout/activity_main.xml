@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/adi"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +34,6 @@
                 android:hint="@string/name"
                 android:inputType="textCapWords"
                 android:textSize="20sp" />
-<<<<<<< HEAD
-=======
 
             <TextView
                 android:background="#e0876a"
@@ -51,17 +49,12 @@
                 android:id="@+id/caffeMocha"
                 style="@style/custom_cheakbox"
                 android:text="@string/caffe_mocha" />
->>>>>>> dev-branch
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-<<<<<<< HEAD
-                android:layout_marginTop="11dp"
-=======
                 android:layout_marginTop="15dp"
->>>>>>> dev-branch
                 android:layout_marginBottom="15dp"
                 android:background="#e0876a"
                 android:orientation="horizontal"
@@ -83,7 +76,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:padding="4dp"
-                    android:text="@string/_1"
+                    android:text="@string/_0"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -96,29 +89,6 @@
                     android:text="@string/minus" />
             </LinearLayout>
 
-            <TextView
-                style="@style/CustomText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="@string/toppings"
-                android:textAllCaps="true" />
-
-            <CheckBox
-                android:id="@+id/cappuccino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/cappuccino"
-                android:textAllCaps="true" />
-
-            <CheckBox
-                android:id="@+id/whippedCream"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/whipped_cream"
-                android:textAllCaps="true" />
-
-
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
@@ -129,32 +99,16 @@
                 android:text="@string/order" />
 
             <TextView
-<<<<<<< HEAD
-                style="@style/CustomText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-=======
->>>>>>> dev-branch
                 android:background="#e0876a"
-<<<<<<< HEAD
-                android:text="@string/order_summary" />
-=======
                 android:text="@string/order_summary"
-<<<<<<< HEAD
-                android:textSize="16sp"
-                android:textStyle="bold" />
->>>>>>> dev-branch
-=======
                 style="@style/custom_textView"/>
->>>>>>> dev-branch
 
             <TextView
                 android:id="@+id/price_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/empty" />
-        </LinearLayout>
 
+        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
