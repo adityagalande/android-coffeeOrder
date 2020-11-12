@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cappuccino = (CheckBox) findViewById(R.id.cappuccino);
         boolean Cappuccino = cappuccino.isChecked();
 
-        CheckBox caffeMocha = (CheckBox) findViewById(R.id.whippedCream);
+        CheckBox caffeMocha = (CheckBox) findViewById(R.id.caffeMocha);
         boolean whippedCream = caffeMocha.isChecked();
 
         String msg = "";
